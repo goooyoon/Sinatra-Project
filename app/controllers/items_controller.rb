@@ -30,12 +30,26 @@ get '/items/:id' do
 end
 
 patch '/items/:id' do
+    set_item
+    if @item.update(
+        name: params[:item][:name], 
+        description: params[:description]
+    )
+    redirect "/items/#{@item.id}"
+    else
+        erb :'/items/edit'
+    end
+end
+
+delete '/items/:id' do
+    set_item
+    @item.destroy
+    redirect '/items'
 end
 
 private
 def set_item
     @item = Item.find_by_id(params[:id])
-end
 end
 
 end
