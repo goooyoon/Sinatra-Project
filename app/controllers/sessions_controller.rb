@@ -9,12 +9,14 @@ class SessionsController < ApplicationController
         session[:user_id] = @user.id
         redirect '/items'
       else
+        flash.now[:error] = ["Username or password didn't match"]
         erb :'sessions/new'
       end
     end
   
     get '/logout' do
       session.clear
+      flash[:notice] = "You are logged out"
       redirect '/'
     end
   end
