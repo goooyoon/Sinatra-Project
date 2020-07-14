@@ -21,7 +21,7 @@ get '/items/:id/edit' do
 end
 
 get '/items/:id' do
-    # @item = Item.find_by_id(params[:id])
+    @item = Item.find_by_id(params[:id])
     if @item
     erb :'items/show'
     else
