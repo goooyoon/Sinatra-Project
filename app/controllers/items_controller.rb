@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController 
 get '/items' do
-    @item = current_user.items
+    @items = current_user.items
     erb :'items/index'
 end
 

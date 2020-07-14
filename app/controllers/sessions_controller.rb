@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+
+  use Rack::Flash
+  
     get '/login' do
       erb :'sessions/new'
     end
