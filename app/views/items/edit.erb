@@ -1,0 +1,27 @@
+<h1>Edit <%= @item.name %></h1>
+
+<form action="/items/:id" method="post">
+<input type="hidden" name="_method" value ="patch">
+
+<br>
+<div>
+<label for="item_name">Item Name</label>
+<input type="text" name="item[name]" id="item">
+</div>
+<br>
+<div>
+<label for="description">Description</label>
+<input type="text" name="description" id="description">
+</div>
+
+<br>
+<div>
+
+<label for="link">Add a link for image reference</label>
+<input type="url" name="image_link" id="image_link">
+</div>
+
+<br>
+
+<input type="submit" value="Create Item">
+</form>

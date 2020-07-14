@@ -16,9 +16,26 @@ post '/items' do
     end
 end
 
+get '/items/:id/edit' do
+    erb :'items/edit'
+end
+
 get '/items/:id' do
-    # binding.pry
+    @item = Item.find_by_id(params[:id])
+    if @item
     erb :'items/show'
+    else
+        redirect '/items'
+    end
+end
+
+patch '/items/:id' do
+end
+
+private
+def set_item
+    @item = Item.find_by_id(params[:id])
+end
 end
 
 end
