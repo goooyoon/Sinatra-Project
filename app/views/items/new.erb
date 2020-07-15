@@ -1,26 +1,32 @@
 <h1>Create Items</h1>
 
 <form action="/items" method="post">
-<br>
+<input type="hidden" name="_method" value ="patch">
 <br>
 <div>
-<label for="name">Item Name</label>
+<label for="name">Name</label>
 <input type="text" name="item" id="item" size="50">
 </div>
 <br>
-<br>
 <div>
-<label for="description">Description</label>
-<input type="text" name="description" id="description" size="50">
+<label for="brand">Brand</label>
+<input type="text" name="brand" id="brand" size="50">
 </div>
 <br>
+<div>
+<label for="price">Price</label>
+<select name="price" id="price">
+<option value="dollar">$</option>
+<option value="pound">£</option>
+<option value="euro">€</option>
+</select>
+<input type="text" name="price" id="price" size="5">
+</div>
 <br>
 <div>
 <label for="link">Add a link for image reference</label>
 <input type="url" name="image_link" id="image_link" size="100">
 </div>
-
 <br>
-
 <input type="submit" value="Create Item">
 </form>
