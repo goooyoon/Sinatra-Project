@@ -19,8 +19,17 @@
     <header> 
         <div class="head"><%= current_user.username %>'s Items</div> 
     </header> 
-    <header>
-    <div class="body">
-    <div class="w3-row-padding w3-padding-16 w3-center" id="name">
-      <img src="item[link]" style="width:100%">
-    </header>
+
+  
+<% @items.each do |item| %>
+  <%= item.name %>
+  <br>
+  <%= item.brand %>
+  <br>
+  <%= item.price %>
+  <br>
+  <%= item.link %>
+  <br>
+  <a href="/items/<%=item.id%>/edit">Edit</a>
+  <br />
+<% end %>

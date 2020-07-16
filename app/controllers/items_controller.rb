@@ -55,7 +55,7 @@ end
 
 delete '/items/:id' do
     set_item
-    if current_user ==@item.user
+    if current_user == @item.user
     @item.destroy
     end
     redirect '/items'
