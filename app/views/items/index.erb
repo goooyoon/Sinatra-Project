@@ -1,3 +1,27 @@
-<h1>Items</h1>
-<hr>
-<img src="item[link]" alt="" srcset="">
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <style> 
+        .head { 
+            font-size:40px; 
+            color:#FF7F50; 
+            font-weight:bold; 
+        } 
+        body { 
+            margin: 0 auto; 
+            background-position:center; 
+            background-size: contain; 
+        } 
+    </style> 
+</head> 
+  
+<body> 
+    <header> 
+        <div class="head"><%= current_user.username %>'s Items</div> 
+    </header> 
+    <header>
+    <div class="body">
+    <div class="w3-row-padding w3-padding-16 w3-center" id="name">
+      <img src="item[link]" style="width:100%">
+      <p>item[brand], item[name]<br>item[price]</p>
+    </header>

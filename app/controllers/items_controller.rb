@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 use Rack::Flash
 
 get '/items' do
-    @items = current_user.items
+    @item = current_user.items
     erb :'items/index'
 end
 

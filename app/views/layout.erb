@@ -12,9 +12,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body style="background-color:lightyellow;">
-    <div class="wrapper">
+       <nav class="indigo darken-4">
+        <div class="wrapper">
       <nav>
-       <% if flash[:error] %>
+        <ul class="right">
+          <% unless logged_in? %>
+            <li><a href="/signup">Create Account</a></li>
+            <li><a href="/login">Login</a></li>
+          <% else %>
+            <li><%= current_user.username %></li>
+            <li><a href="/logout">Logout</a></li>
+          <% end %>
+        </ul>
+      </nav>
+        <% if flash[:error] %>
           <% flash[:error].each do |error| %>
             <div>
               <%= error %>
