@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController 
+use Rack::Flash
+
 get '/items' do
     @items = current_user.items
     erb :'items/index'
@@ -41,11 +43,13 @@ patch '/items/:id' do
     set_item
     if current_user == @item.user && @item.update(
         name: params[:item][:name], 
-        description: params[:item][:description]
+        brand: params[:item][:brand],
+        price: params[:item][:price],
+        link: params[:item][:link]
     )
     redirect "/items/#{@item.id}"
     else
-        erb :'/items/edit'
+        erb :'items/edit'
     end
 end
 
@@ -53,9 +57,8 @@ delete '/items/:id' do
     set_item
     if current_user ==@item.user
     @item.destroy
-    else
-    redirect '/items'
     end
+    redirect '/items'
 end
 
 private

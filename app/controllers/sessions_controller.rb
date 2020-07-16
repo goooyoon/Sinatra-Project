@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-
   use Rack::Flash
   
     get '/login' do
@@ -12,7 +11,7 @@ class SessionsController < ApplicationController
         session[:user_id] = @user.id
         redirect '/items'
       else
-        flash.now[:error] = ["Username or password didn't match"]
+        flash.now[:error] = ["Username or password didn't match. Please retype."]
         erb :'sessions/new'
       end
     end
