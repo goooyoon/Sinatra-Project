@@ -9,24 +9,20 @@
         } 
     </style> 
 </head> 
-  
+  <div>
+  <p><a href="http://127.0.0.1:9393/items/new">TO ADD NEW ITEMS</a></p>
+  </div>
 <body> 
     <header> 
         <div class="head"><%= current_user.username %>'s Items</div> 
     </header> 
 
 <% @items.each do |item| %>
-<div class="row">
-    <div class="col s12 m6">
-      <div class="card">
-        <div class="card-image">
-          <img src="<%= item.link %>" width="200" height="300">
+          <span class="card-title">Name: <%= item.name %></span>
           <br>
-          <span class="card-title"><%= item.name %></span>
+          <span class="card-title">Brand: <%= item.brand %></span>
           <br>
-          <span class="card-title"><%= item.brand %></span>
-          <br>
-          <span class="card-title"><%= item.price %></span>
+          <span class="card-title">Price: $<%= item.price %></span>
           <br>
           <a href="<%= item.link %>">Link to website</a>
           <br>
@@ -34,7 +30,6 @@
       </div>
     </div>
   </div>
-   <br>
   <a href="/items/<%=item.id%>/edit">Edit</a>
   <br>
   <br>
