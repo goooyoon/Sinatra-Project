@@ -11,9 +11,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+      <body style="background-color:#F5B7B1;">
       <!-- navigation -->
-      <nav>
-        <ul>
+       <nav>
+        <div class="container">
+        <ul class="right">
           <% unless logged_in? %>
             <li><a href="/signup">Create Account</a></li>
             <li><a href="/login">Login</a></li>
@@ -22,11 +24,11 @@
             <li><a href="/logout">Logout</a></li>
           <% end %>
         </ul>
+       </div>
       </nav>
-        <body class="background-color:lightyellow">
     <!-- end navigation -->
-      
-       <!-- error messages -->
+    
+    <!-- error messages -->
         <% if flash[:error] %>
           <% flash[:error].each do |error| %>
             <div>
@@ -40,20 +42,23 @@
           </div>
         <% end %>
       <!--  end error messages -->
-
-    <div class="container" style="font-family:verdana">
-      <%= yield %>
-    </div>
        
-        <!-- footer -->
-        <footer class="branding">
-            <small>&copy; 2020 <strong>Grace Kim</strong></small>
-        </footer>
+        <%= yield %>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+      <!-- footer -->
+        <footer>
+        <center>
+            <small>&copy; 2020 <strong>Grace Kim goooyoon@gmail.com</strong></small>
+        </center>
+        </footer>
+     <!-- end footer -->   
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <!--[if lt IE 7]>
       <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
       <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
     <![endif]-->
   </body>
 </html>
+
