@@ -1,27 +1,17 @@
-<!DOCTYPE html> 
-<html>  
-  <div>
-  <p><a href="http://127.0.0.1:9393/items/new">TO ADD NEW ITEMS</a></p>
-  </div>
-<body> 
     <header> 
-        <div class="head"><%= current_user.username %>'s Items</div> 
+        <div style="font-size:60px; color:coral;"><%= current_user.username %>'s Items</div> 
     </header> 
-
+    <br>
+    <br>
+   <div>
 <% @items.each do |item| %>
-          <span class="card-title">Name: <%= item.name %></span>
-          <br>
-          <span class="card-title">Brand: <%= item.brand %></span>
-          <br>
-          <span class="card-title">Price: $<%= item.price %></span>
-          <br>
+          <p class="blue-text text-darken-2">Name: <%= item.name %></p>
+          <p class="blue-text text-darken-2">Brand: <%= item.brand %></p>
+          <p class="blue-text text-darken-2">Price: $<%= item.price %></p>
           <a href="<%= item.link %>">Link to website</a>
           <br>
-        </div>
-      </div>
-    </div>
-  </div>
   <a href="/items/<%=item.id%>/edit">Edit</a>
   <br>
   <br>
   <% end %>
+  </div>

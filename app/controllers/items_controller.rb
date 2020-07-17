@@ -16,7 +16,6 @@ post '/items' do
     if @item.save
         redirect '/items'
     else
-        flash.now[:error] = @item.errors.full_messages
         erb :'items/new'
     end
 end

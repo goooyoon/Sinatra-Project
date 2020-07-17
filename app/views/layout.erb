@@ -10,12 +10,17 @@
     <title>INSTYLECART</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
   </head>
-      <body style="background-color:#F5B7B1;">
+      <body style="background-color:lightblue;">
+      
       <!-- navigation -->
+      <div class="container">
        <nav>
-        <div class="container">
-        <ul class="right">
+        <div>
+         <ul class="right">
           <% unless logged_in? %>
             <li><a href="/signup">Create Account</a></li>
             <li><a href="/login">Login</a></li>
@@ -24,6 +29,12 @@
             <li><a href="/logout">Logout</a></li>
           <% end %>
         </ul>
+          <div>
+          <p><a href="http://127.0.0.1:9393/items">HOME</a></p>
+          </div>
+          <div>
+          <p><a href="http://127.0.0.1:9393/items/new">ADD NEW ITEMS</a></p>
+          </div>
        </div>
       </nav>
     <!-- end navigation -->
@@ -42,10 +53,9 @@
           </div>
         <% end %>
       <!--  end error messages -->
-       
+       <center>
         <%= yield %>
-
-
+       </center>
       <!-- footer -->
         <footer>
         <center>
@@ -55,10 +65,14 @@
      <!-- end footer -->   
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <!--[if lt IE 7]>
       <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
       <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
     <![endif]-->
+    </div>
   </body>
 </html>
 
