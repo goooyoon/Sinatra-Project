@@ -11,11 +11,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body style="background-color:lightyellow;">
-       <nav class="indigo darken-4">
-        <div class="wrapper">
+      <!-- navigation -->
       <nav>
-        <ul class="right">
+        <ul>
           <% unless logged_in? %>
             <li><a href="/signup">Create Account</a></li>
             <li><a href="/login">Login</a></li>
@@ -25,6 +23,10 @@
           <% end %>
         </ul>
       </nav>
+        <body class="background-color:lightyellow">
+    <!-- end navigation -->
+      
+       <!-- error messages -->
         <% if flash[:error] %>
           <% flash[:error].each do |error| %>
             <div>
@@ -37,13 +39,16 @@
             <%= flash[:notice] %>
           </div>
         <% end %>
+      <!--  end error messages -->
 
-        <%= yield %>
-
+    <div class="container" style="font-family:verdana">
+      <%= yield %>
+    </div>
+       
+        <!-- footer -->
         <footer class="branding">
             <small>&copy; 2020 <strong>Grace Kim</strong></small>
         </footer>
-        </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <!--[if lt IE 7]>
