@@ -7,11 +7,6 @@
             color:#FF7F50; 
             font-weight:bold; 
         } 
-        body { 
-            margin: 0 auto; 
-            background-position:center; 
-            background-size: contain; 
-        } 
     </style> 
 </head> 
   
@@ -20,16 +15,27 @@
         <div class="head"><%= current_user.username %>'s Items</div> 
     </header> 
 
-  
 <% @items.each do |item| %>
-  <%= item.name %>
-  <br>
-  <%= item.brand %>
-  <br>
-  <%= item.price %>
-  <br>
-  <%= item.link %>
-  <br>
+<div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= item.link %>" width="200" height="300">
+          <br>
+          <span class="card-title"><%= item.name %></span>
+          <br>
+          <span class="card-title"><%= item.brand %></span>
+          <br>
+          <span class="card-title"><%= item.price %></span>
+          <br>
+          <a href="<%= item.link %>">Link to website</a>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+   <br>
   <a href="/items/<%=item.id%>/edit">Edit</a>
-  <br />
-<% end %>
+  <br>
+  <br>
+  <% end %>
