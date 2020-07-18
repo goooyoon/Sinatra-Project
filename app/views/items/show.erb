@@ -1,10 +1,20 @@
-<h1>NAME: <%= @item.name %></h1>
-<p>BRAND: <%= @item.brand %></p>
-<p>PRICE:$ <%= @item.price %></p>
-<p>LINK: <%= @item.link %></p>
-
-<form action="/items/<%= @item.id %>" method="post">
-<input type="hidden" name="_method" value="delete">
-<input type="submit" value="DELETE">
-</form>
+<body>
+    <div class="red-text text-lighten-2">
+        <center>
+        <h1 style="font-size:60px">EDIT</h1>
+        </center>
+    </div>
+    <div class="card-panel">
+        <p>NAME: <%= @item.name %></p>
+        <p>BRAND: <%= @item.brand %></p>
+        <p>PRICE: $ <%= @item.price %></p>
+        <p>LINK: <%= @item.link %></p>
+        <center>
+        <form action="/items/<%= @item.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="DELETE">
+        </form>
+        </center>
+    </div>
+</body>
 
