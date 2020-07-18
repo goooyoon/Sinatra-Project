@@ -9,11 +9,13 @@
 
     <title>INSTYLECART</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+
      <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   </head>
+
   <body style="background-image: url('https://pe-images.s3.amazonaws.com/basics/cs6/layers/background-layer-action/adobe-stock-image.jpg')">
       
       <!-- navigation -->
@@ -25,7 +27,7 @@
             <li><a href="/signup">CREATE ACCOUNT</a></li>
             <li><a href="/login">LOGIN</a></li>
           <% else %>
-            <li><%= current_user.username %></li>
+            <li>WELCOME, <%= current_user.username %></li>
             <li><a href="/logout">LOGOUT</a></li>
           <% end %>
         </ul>
@@ -62,6 +64,7 @@
      <!-- end footer -->   
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 

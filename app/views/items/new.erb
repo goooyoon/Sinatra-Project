@@ -1,13 +1,12 @@
-<body class="red-text text-lighten-2">
+<body>
     <center>
-        <h1 style="font-size:50px; font-family:impact">CREATE ITEM</h1>
+        <h1 style="color:white; font-size:50px; font-family:impact">CREATE ITEM</h1>
     </center>
 <div class="card-panel">  
    <form action="/items" method="post">
     <br>
         <div>
-            <label for="name">NAME:</label>
-            <input type="text" name="item[name]" id="name" value="<%= @item.name %>" size="50">
+            <label for="name">NAME:</label><input type="text" name="item[name]" id="name" value="<%= @item.name %>" size="50">
         </div>
     <br>
         <div>

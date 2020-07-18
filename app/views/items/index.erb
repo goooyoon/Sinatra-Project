@@ -1,19 +1,24 @@
-    <header class="red-text text-lighten-2"> 
+    <body>
       <center>
-        <div style="font-size:50px; font-family:impact"><%= current_user.username %> ITEMS</div> 
+        <div style="color:white; font-size:50px; font-family:impact"><%= current_user.username %> LIST</div> 
       </center>
-    </header> 
-    <br>
-    <br>
-   <div class="card-panel">
-        <% @items.each do |item| %>
-          <p>NAME: <%= item.name %></p>
+    </body>
+   <div class="row">
+    <div class="col s12 m15">
+      <div class="card black">
+        <div class="card-content white-text">
+          <div class="card-action">
+          <% @items.each do |item| %>
+          <span class="card-title">NAME: <%= item.name %></span>
           <p>BRAND: <%= item.brand %></p>
           <p>PRICE: $ <%= item.price %></p>
           <a href="<%= item.link %>">LINK TO WEBSITE</a>
+          <a href="/items/<%=item.id%>/edit">EDIT</a>
           <br>
-        <a href="/items/<%=item.id%>/edit">EDIT</a>
-    <br>
-    <br>
-         <% end %>
-  </div>
+          <br>
+            <% end %>
+        </div>
+        </div>
+       </div>
+      </div>
+    </div>
