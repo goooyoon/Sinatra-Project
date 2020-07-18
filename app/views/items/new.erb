@@ -1,28 +1,31 @@
-<body>
-<h1 style="color:fuchsia;font-size:30px">Create Items</h1>
-
-<form action="/items" method="post">
-<br>
-<div>
-<label for="name">Name</label>
-<input type="text" name="item[name]" id="name" value="<%= @item.name %>" size="50">
-</div>
-<br>
-<div>
-<label for="brand">Brand</label>
-<input type="text" name="item[brand]" id="brand" value="<%= @item.brand %>" size="50">
-</div>
-<br>
-<div>
-<label for="price">Price: $ </label>
-<input type="text" name="item[price]" id="price" value="<%= @item.price %>" size="5">
-</div>
-<br>
-<div>
-<label for="link">Add a link for image reference</label>
-<input type="url" name="item[link]" id="link" value="<%= @item.link %>" size="100">
-</div>
-<br>
-<input type="submit" value="Create Item">
-</form>
+<body class="red-text text-lighten-2">
+    <center>
+        <h1 style="font-size:60px; font-family:verdana;">CREATE ITEM</h1>
+    </center>
+<div class="card-panel">  
+   <form action="/items" method="post">
+    <br>
+        <div>
+            <label for="name">NAME:</label>
+            <input type="text" name="item[name]" id="name" value="<%= @item.name %>" size="50">
+        </div>
+    <br>
+        <div>
+            <label for="brand">BRAND:</label>
+            <input type="text" name="item[brand]" id="brand" value="<%= @item.brand %>" size="50">
+        </div>
+    <br>
+        <div>
+            <label for="price">PRICE: $ </label>
+            <input type="text" name="item[price]" id="price" value="<%= @item.price %>" size="5">
+        </div>
+    <br>
+        <div>
+            <label for="link">ADD A LINK</label>
+            <input type="url" name="item[link]" id="link" value="<%= @item.link %>" size="100">
+        </div>
+    <br>
+        <input type="submit" value="CREATE ITEM">
+   </form>
+  </div>  
 </body>

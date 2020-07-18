@@ -1,29 +1,29 @@
 <body>
-<h1 style="color:fuchsia;font-size:30px">Edit <%= @item.name %></h1>
+<h1 style="font-size:60px">EDIT<%= @item.name %></h1>
 
 <form action="/items/<%= @item.id %>" method="post">
 <input type="hidden" name="_method" value ="patch">
 <br>
 <div>
-<label for="name">Name</label>
+<label for="name">NAME:</label>
 <input type="text" name="item[name]" id="name" value="<%= @item.name %>" size="50">
 </div>
 <br>
 <div>
-<label for="brand">Brand</label>
+<label for="brand">BRAND:</label>
 <input type="text" name="item[brand]" id="brand" value="<%= @item.brand %>" size="50">
 </div>
 <br>
 <div>
-<label for="price">Price: $ </label>
+<label for="price">PRICE: $ </label>
 <input type="text" name="item[price]" id="price" value="<%= @item.price %>" size="5">
 </div>
 <br>
 <div>
-<label for="link">Add a link for image reference</label>
+<label for="link">ADD A LINK</label>
 <input type="url" name="item[link]" id="link" value="<%= @item.link %>" size="100">
 </div>
 <br>
-<input type="submit" value="Update Item">
+<input type="submit" value="UPDATE ITEM">
 </form>
 </body>

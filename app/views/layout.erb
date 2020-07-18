@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   </head>
-      <body style="background-color:lightblue;">
+  <body style="background-image: url('https://pe-images.s3.amazonaws.com/basics/cs6/layers/background-layer-action/adobe-stock-image.jpg')">
       
       <!-- navigation -->
       <div class="container">
@@ -22,18 +22,18 @@
         <div>
          <ul class="right">
           <% unless logged_in? %>
-            <li><a href="/signup">Create Account</a></li>
-            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">CREATE ACCOUNT</a></li>
+            <li><a href="/login">LOGIN</a></li>
           <% else %>
             <li><%= current_user.username %></li>
-            <li><a href="/logout">Logout</a></li>
+            <li><a href="/logout">LOGOUT</a></li>
           <% end %>
         </ul>
           <div>
-          <p><a href="http://127.0.0.1:9393/items">HOME</a></p>
-          </div>
-          <div>
-          <p><a href="http://127.0.0.1:9393/items/new">ADD NEW ITEMS</a></p>
+          <ul>
+          <li><a href="http://127.0.0.1:9393/items">HOME</a></li>
+          <li><a href="http://127.0.0.1:9393/items/new">ADD NEW ITEMS</a></li>
+          <ul>
           </div>
        </div>
       </nav>
@@ -47,19 +47,16 @@
             </div>
           <% end %>
         <% end %>
-        <% if flash[:notice] %>
-          <div>
-            <%= flash[:notice] %>
-          </div>
-        <% end %>
       <!--  end error messages -->
-       <center>
+
         <%= yield %>
-       </center>
+      
       <!-- footer -->
-        <footer>
+        <footer class="card-panel">
         <center>
-            <small>&copy; 2020 <strong>Grace Kim goooyoon@gmail.com</strong></small>
+        <div class="black-text">
+            <small>&copy; 2020 <strong>GRACE KIM goooyoon@gmail.com</strong></small>
+        </div>
         </center>
         </footer>
      <!-- end footer -->   

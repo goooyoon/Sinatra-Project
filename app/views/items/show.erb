@@ -1,10 +1,10 @@
-<h1>Name: <%= @item.name %></h1>
-<p>Brand: <%= @item.brand %></p>
-<p>Price: <%= @item.price %></p>
-<p>Link: <%= @item.link %></p>
+<h1>NAME: <%= @item.name %></h1>
+<p>BRAND: <%= @item.brand %></p>
+<p>PRICE:$ <%= @item.price %></p>
+<p>LINK: <%= @item.link %></p>
 
 <form action="/items/<%= @item.id %>" method="post">
 <input type="hidden" name="_method" value="delete">
-<input type="submit" value="Delete">
+<input type="submit" value="DELETE">
 </form>
 
