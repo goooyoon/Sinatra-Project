@@ -3,7 +3,7 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
       t.string :name
       t.string :brand
-      t.decimal :price
+      t.integer :price
       t.string :link
       
 

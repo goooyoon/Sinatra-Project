@@ -9,9 +9,9 @@
         <div class="card-content white-text">
           <div class="card-action">
           <% @items.each do |item| %>
-          <span class="card-title">NAME: <%= item.name %></span>
+          <p>NAME: <%= item.name %></p>
           <p>BRAND: <%= item.brand %></p>
-          <p>PRICE: $ <%= item.price %></p>
+          <p>PRICE: $<%= item.price %></p>
           <a href="<%= item.link %>">LINK TO WEBSITE</a>
           <a href="/items/<%=item.id%>/edit">EDIT</a>
           <br>

@@ -1,19 +1,19 @@
 <body>
     <div>
         <center>
-        <h1 style="color:white; font-size:50px; font-family:impact">EDIT</h1>
+            <h1 style="color:white; font-size:50px; font-family:impact">EDIT</h1>
         </center>
     </div>
     <div class="card-panel">
         <p>NAME: <%= @item.name %></p>
         <p>BRAND: <%= @item.brand %></p>
-        <p>PRICE: $ <%= @item.price %></p>
+        <p>PRICE: $<%= @item.price %></p>
         <p>LINK: <%= @item.link %></p>
         <center>
-        <form action="/items/<%= @item.id %>" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="DELETE">
-        </form>
+            <form action="/items/<%= @item.id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="DELETE">
+            </form>
         </center>
     </div>
 </body>
